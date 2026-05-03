@@ -1,0 +1,492 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Portfolio - Cristian Gordillo Expósito</title>
+    <meta
+      name="description"
+      content="Portfolio de desarrollador web full stack con base en Madrid."
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Syne:wght@400;500;700;800&amp;family=DM+Sans:ital,wght@0,300;0,400;0,500;1,300&amp;display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <div class="cursor" id="cursor"></div>
+    <div class="cursor-ring" id="cursorRing"></div>
+
+    <nav id="navbar">
+      <div class="nav-inner">
+        <a href="#hero" class="nav-logo">cristian<span>.</span>gordillo</a>
+        <ul class="nav-links">
+          <li><a href="#about">Acerca de mi</a></li>
+          <li><a href="#projects">Proyectos</a></li>
+          <li><a href="#experience">Experiencia</a></li>
+        </ul>
+        <div class="nav-actions">
+          <a href="#contact" class="nav-cta">Contacto</a>
+          <a
+            href="/resources/cv-cristian-gordillo.pdf"
+            class="nav-cta nav-cta--accent"
+            download
+          >
+            Descargar CV
+          </a>
+        </div>
+        <button
+          class="hamburger"
+          id="hamburger"
+          type="button"
+          aria-label="Abrir menu"
+          aria-controls="mobileMenu"
+          aria-expanded="false"
+        >
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+      </div>
+    </nav>
+
+    <div
+      class="mobile-menu"
+      id="mobileMenu"
+      aria-hidden="true"
+      aria-label="Menu de navegacion movil"
+    >
+      <button
+        class="mobile-close"
+        id="mobileClose"
+        type="button"
+        aria-label="Cerrar menu"
+      >
+        &times;
+      </button>
+      <a href="#about" class="mobile-link">Acerca de mi</a>
+      <a href="#projects" class="mobile-link">Proyectos</a>
+      <a href="#experience" class="mobile-link">Experiencia</a>
+      <a href="#contact" class="mobile-link">Contacto</a>
+    </div>
+
+    <main>
+      <section id="hero">
+        <div class="hero-grid-bg"></div>
+        <div class="hero-glow"></div>
+        <div class="container">
+          <div class="hero-tag">Disponible para proyectos</div>
+          <h1>
+            Desarrollo<br />
+            <em>web</em> que<br />
+            importa.
+          </h1>
+          <p class="hero-desc">
+            Construyo experiencias digitales r&aacute;pidas, accesibles y con
+            atenci&oacute;n al detalle. Frontend + Backend, de la idea al
+            deploy.
+          </p>
+          <div class="hero-actions">
+            <a href="#projects" class="btn-main">Ver proyectos &rarr;</a>
+            <a href="#contact" class="btn-ghost">Hablemos &nearr;</a>
+          </div>
+          <div class="hero-stats">
+            <div>
+              <div class="stat-num">4<span>+</span></div>
+              <div class="stat-label">A&ntilde;os exp.</div>
+            </div>
+            <div>
+              <div class="stat-num">5<span>+</span></div>
+              <div class="stat-label">Proyectos</div>
+            </div>
+            <div>
+              <div class="stat-num">3<span>+</span></div>
+              <div class="stat-label">Clientes</div>
+            </div>
+          </div>
+        </div>
+        <div class="hero-scroll">
+          <span>Scroll</span>
+          <div class="scroll-line"></div>
+        </div>
+      </section>
+
+      <section id="about">
+        <div class="container">
+          <div class="section-header reveal">
+            <span class="section-num">01</span>
+            <h2>Sobre m&iacute;</h2>
+            <div class="divider"></div>
+          </div>
+          <div class="about-grid">
+            <div class="about-text reveal">
+              <p>
+                Hola!, soy
+                <strong>Cristian</strong>, desarrollador web full stack con base en Madrid.
+                Tengo un gran interés por la tecnología y la programación. Me encanta aprender
+                cosas nuevas y enfrentar desafíos que me permitan crecer tanto
+                personal como profesionalmente. Actualmente trabajo en una gran
+                consultora Japonesa llamada NTT DATA, donde tengo la oportunidad
+                de colaborar en proyectos interesantes y trabajar con un equipo
+                talentoso.
+              </p>
+              <p>
+                Trabajo principalmente con
+                <strong>Angular, Node.js, TypeScript y Java</strong>, aunque siempre
+                aprendo nuevas herramientas si el proyecto lo requiere.
+              </p>
+              <div class="skills-list">
+                <span class="skill-tag">Angular</span>
+                <span class="skill-tag">Java</span>
+                <span class="skill-tag">TypeScript</span>
+                <span class="skill-tag">Node.js</span>
+                <span class="skill-tag">HxGn</span>
+                <span class="skill-tag">MongoDB</span>
+                <span class="skill-tag">SCSS</span>
+                <span class="skill-tag">Git</span>
+                <span class="skill-tag">Figma</span>
+                <span class="skill-tag">Astro</span>
+              </div>
+            </div>
+
+            <div class="about-card reveal reveal-delay-2">
+              <div class="about-card-row">
+                <span class="acr-label">Ubicaci&oacute;n</span>
+                <span class="acr-val">Madrid, Espa&ntilde;a</span>
+              </div>
+              <div class="about-card-row">
+                <span class="acr-label">Disponibilidad</span>
+                <span class="acr-val green">&bull; Abierto a proyectos</span>
+              </div>
+              <div class="about-card-row">
+                <span class="acr-label">Modalidad</span>
+                <span class="acr-val">Remoto / H&iacute;brido</span>
+              </div>
+              <div class="about-card-row">
+                <span class="acr-label">Idiomas</span>
+                <span class="acr-val">ES &middot; EN</span>
+              </div>
+              <div class="about-card-row">
+                <span class="acr-label">Especialidad</span>
+                <span class="acr-val">Full Stack</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="projects">
+        <div class="container">
+          <div class="section-header reveal">
+            <span class="section-num">02</span>
+            <h2>Proyectos</h2>
+            <div class="divider"></div>
+          </div>
+          <div class="projects-grid">
+            <article class="project-card featured reveal">
+              <div class="featured-visual">
+                <svg
+                  width="120"
+                  height="80"
+                  viewBox="0 0 120 80"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <rect
+                    x="10"
+                    y="10"
+                    width="100"
+                    height="60"
+                    rx="6"
+                    stroke="#c8f542"
+                    stroke-width="1"
+                  />
+                  <line
+                    x1="10"
+                    y1="25"
+                    x2="110"
+                    y2="25"
+                    stroke="#c8f542"
+                    stroke-width="0.5"
+                  />
+                  <rect
+                    x="18"
+                    y="33"
+                    width="20"
+                    height="28"
+                    rx="2"
+                    fill="#c8f542"
+                    fill-opacity="0.2"
+                  />
+                  <rect
+                    x="45"
+                    y="22"
+                    width="20"
+                    height="39"
+                    rx="2"
+                    fill="#c8f542"
+                    fill-opacity="0.35"
+                  />
+                  <rect
+                    x="72"
+                    y="38"
+                    width="20"
+                    height="23"
+                    rx="2"
+                    fill="#c8f542"
+                    fill-opacity="0.15"
+                  />
+                </svg>
+              </div>
+
+              <div class="featured-info">
+                <div class="project-top project-top--featured">
+                  <span class="project-badge">Destacado</span>
+                  <div class="project-arrow" aria-hidden="true">&nearr;</div>
+                </div>
+                <div class="project-title project-title--featured">
+                  Dashboard de anal&iacute;ticas
+                </div>
+                <div class="project-desc">
+                  Panel en tiempo real para visualizar m&eacute;tricas de
+                  negocio. Gr&aacute;ficos interactivos, filtros avanzados y
+                  exportaci&oacute;n a CSV. Procesando m&aacute;s de 500k
+                  eventos al d&iacute;a.
+                </div>
+                <div class="project-stack project-stack--featured">
+                  <span class="stack-chip">React</span>
+                  <span class="stack-chip">D3.js</span>
+                  <span class="stack-chip">Node.js</span>
+                  <span class="stack-chip">PostgreSQL</span>
+                </div>
+              </div>
+            </article>
+
+            <article class="project-card reveal reveal-delay-1">
+              <div class="project-top">
+                <span class="project-badge">E-commerce</span>
+                <div class="project-arrow" aria-hidden="true">&nearr;</div>
+              </div>
+              <div class="project-title">Tienda online</div>
+              <div class="project-desc">
+                Plataforma con carrito, pagos con Stripe y panel de
+                administraci&oacute;n para gesti&oacute;n de inventario en
+                tiempo real.
+              </div>
+              <div class="project-stack">
+                <span class="stack-chip">Next.js</span>
+                <span class="stack-chip">PostgreSQL</span>
+                <span class="stack-chip">Stripe</span>
+              </div>
+            </article>
+
+            <article class="project-card reveal reveal-delay-2">
+              <div class="project-top">
+                <span class="project-badge">API</span>
+                <div class="project-arrow" aria-hidden="true">&nearr;</div>
+              </div>
+              <div class="project-title">API REST escalable</div>
+              <div class="project-desc">
+                Backend con autenticaci&oacute;n JWT, documentaci&oacute;n
+                Swagger autom&aacute;tica y cobertura de tests al 90%.
+              </div>
+              <div class="project-stack">
+                <span class="stack-chip">Express</span>
+                <span class="stack-chip">MongoDB</span>
+                <span class="stack-chip">Jest</span>
+              </div>
+            </article>
+
+            <article class="project-card reveal reveal-delay-1">
+              <div class="project-top">
+                <span class="project-badge">App m&oacute;vil</span>
+                <div class="project-arrow" aria-hidden="true">&nearr;</div>
+              </div>
+              <div class="project-title">App de gesti&oacute;n</div>
+              <div class="project-desc">
+                Herramienta interna para equipos: tareas, notificaciones push y
+                sincronizaci&oacute;n offline.
+              </div>
+              <div class="project-stack">
+                <span class="stack-chip">React Native</span>
+                <span class="stack-chip">Firebase</span>
+              </div>
+            </article>
+
+            <article class="project-card reveal reveal-delay-2">
+              <div class="project-top">
+                <span class="project-badge">SaaS</span>
+                <div class="project-arrow" aria-hidden="true">&nearr;</div>
+              </div>
+              <div class="project-title">Plataforma SaaS</div>
+              <div class="project-desc">
+                Producto multitenant con planes de suscripci&oacute;n,
+                onboarding guiado y panel de billing integrado.
+              </div>
+              <div class="project-stack">
+                <span class="stack-chip">Next.js</span>
+                <span class="stack-chip">Prisma</span>
+                <span class="stack-chip">Stripe</span>
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section id="experience">
+        <div class="container">
+          <div class="section-header reveal">
+            <span class="section-num">03</span>
+            <h2>Experiencia</h2>
+            <div class="divider"></div>
+          </div>
+          <div class="exp-list">
+            <article class="exp-item reveal">
+              <div class="exp-date">2022 &mdash; Actual</div>
+              <div>
+                <div class="exp-company">NTTData</div>
+                <div class="exp-role">Enginer - Frontend Leader</div>
+                <div class="exp-desc">
+                  Soporte y construccion de aplicaciones web para clientes del sector publico. Construcción de componentes reutilizables y modulares. Colaboracion con equipos de backend y diseño para crear soluciones integrales. Participacion en la definicion de arquitectura frontend y mejores practicas. Mentoria a desarrolladores junior y revisiones de codigo.
+                </div>
+              </div>
+            </article>
+
+            <article class="exp-item reveal reveal-delay-1">
+              <div class="exp-date">2021 &mdash; 2021</div>
+              <div>
+                <div class="exp-company">AppyWeb</div>
+                <div class="exp-role">Practicas</div>
+                <div class="exp-desc">
+                  Desarrollo de aplicaciones web, encargado de la parte del backend y colaboracion en el frontend. Participacion en reuniones de equipo y presentacion de avances a clientes.
+                </div>
+              </div>
+            </article>
+
+            <article class="exp-item reveal reveal-delay-2">
+              <div class="exp-date">2018 &mdash; 2018</div>
+              <div>
+                <div class="exp-company">Tinsa Portugal</div>
+                <div class="exp-role">Practicas</div>
+                <div class="exp-desc">
+                  Soporte tecnico y mantenimiento de equipos informaticos. Instalacion y configuracion de software. Atencion a clientes. Instalacion de redes y gestion de incidencias. Colaboracion en proyectos de mejora de infraestructura IT.
+                </div>
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section id="contact">
+        <div class="contact-glow"></div>
+        <div class="container">
+          <div class="reveal">
+            <div class="contact-title">&iquest;Trabajamos<br />juntos?</div>
+            <p class="contact-sub">
+              Estoy disponible para proyectos freelance y posiciones full-time.
+            </p>
+            <button class="contact-email" id="contactModalOpen" type="button">
+              Enviame un correo <span role="img" aria-label="emoji">📧</span>
+            </button>
+            <div class="social-row">
+              <a
+                href="https://github.com/TheCrisHunter"
+                class="social-link"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                GitHub
+              </a>
+              <a
+                href="https://www.linkedin.com/in/cristiangordillo/"
+                class="social-link"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                LinkedIn
+              </a>
+              <a
+                href="/resources/cv-cristian-gordillo.pdf"
+                class="social-link social-link--accent"
+                download
+              >
+                Descargar CV
+              </a>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <div class="contact-modal" id="contactModal" aria-hidden="true">
+      <div class="contact-modal__backdrop" data-modal-close></div>
+      <form class="contact-modal__panel" id="contactForm" aria-labelledby="contactModalTitle">
+        <button
+          class="contact-modal__close"
+          type="button"
+          id="contactModalClose"
+          aria-label="Cerrar formulario"
+        >
+          &times;
+        </button>
+        <h2 id="contactModalTitle">Nuevo mensaje</h2>
+        <label class="form-field" for="contactEmail">
+          <span>Email de contacto</span>
+          <input
+            id="contactEmail"
+            name="contactEmail"
+            type="email"
+            autocomplete="email"
+            placeholder="tu@email.com"
+            required
+          />
+        </label>
+        <label class="form-field" for="contactSubject">
+          <span>Asunto</span>
+          <input
+            id="contactSubject"
+            name="subject"
+            type="text"
+            value="¡Quiero colaborar contigo!"
+            required
+          />
+        </label>
+        <label class="form-field" for="contactMessage">
+          <span>Mensaje</span>
+          <textarea id="contactMessage" name="message" rows="6" required>Hola Cristian,
+
+Me gustaría colaborar contigo en un proyecto. Me ha parecido interesante tu portfolio y creo que podríamos hablar sobre una posible colaboración.
+
+Gracias.</textarea>
+        </label>
+        <label class="form-field form-field--hidden" for="contactWebsite">
+          <span>Web</span>
+          <input
+            id="contactWebsite"
+            name="website"
+            type="text"
+            tabindex="-1"
+            autocomplete="off"
+          />
+        </label>
+        <p class="form-status" id="contactStatus" aria-live="polite"></p>
+        <button class="modal-submit" id="contactSubmit" type="submit">
+          Enviar mensaje
+        </button>
+      </form>
+    </div>
+
+    <footer>
+      <div class="container">
+        <span class="footer-copy">
+          &copy; 2025 Cristian - Hecho con <span>&hearts;</span> en Madrid
+        </span>
+        <a href="#hero" class="back-top">&uarr; Volver arriba</a>
+      </div>
+    </footer>
+
+    <script type="module" src="/src/main.ts"></script>
+  </body>
+</html>
