@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 700 700" role="img" aria-label="Pockety">
+  <rect width="700" height="700" fill="#ffffff"/>
+  <g fill="none" stroke="#000000" stroke-width="7">
+    <circle cx="161" cy="303" r="35"/>
+    <circle cx="252" cy="303" r="35"/>
+    <circle cx="161" cy="390" r="35"/>
+    <circle cx="252" cy="390" r="35"/>
+    <path d="M305 247v190" stroke-width="8"/>
+  </g>
+  <g fill="#000000" font-family="Georgia, serif" font-weight="700" text-anchor="middle">
+    <text x="161" y="318" font-size="48">₿</text>
+    <text x="252" y="318" font-size="48">€</text>
+    <text x="161" y="405" font-size="47">$</text>
+    <text x="252" y="405" font-size="47">£</text>
+  </g>
+  <text x="328" y="354" fill="#000000" font-family="DM Sans, Arial, sans-serif" font-size="68" font-weight="400" letter-spacing="2">pockety</text>
+</svg>

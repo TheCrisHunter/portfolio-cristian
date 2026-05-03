@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 520 220" role="img" aria-label="API REST escalable">
+  <rect width="520" height="220" rx="18" fill="#111111"/>
+  <g fill="#0a0a0a" stroke="rgba(255,255,255,.12)">
+    <rect x="64" y="50" width="126" height="52" rx="12"/>
+    <rect x="64" y="124" width="126" height="52" rx="12"/>
+    <rect x="330" y="86" width="126" height="52" rx="12"/>
+  </g>
+  <g stroke="#c8f542" stroke-width="6" stroke-linecap="round">
+    <path d="M190 76h72c30 0 38 34 68 34"/>
+    <path d="M190 150h72c30 0 38-40 68-40"/>
+  </g>
+  <g fill="#c8f542">
+    <circle cx="126" cy="76" r="10"/>
+    <circle cx="126" cy="150" r="10"/>
+    <circle cx="394" cy="112" r="10"/>
+  </g>
+  <text x="394" y="119" fill="#f0ede8" font-family="DM Sans, Arial, sans-serif" font-size="21" text-anchor="middle">API</text>
+</svg>

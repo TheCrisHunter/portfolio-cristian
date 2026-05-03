@@ -1,0 +1,53 @@
+{
+  "routes": [
+    {
+      "src": "/(.*)",
+      "has": [
+        {
+          "type": "host",
+          "value": "www.cristiangordilloexposito.com"
+        }
+      ],
+      "headers": {
+        "Location": "https://cristiangordilloexposito.com/$1"
+      },
+      "status": 308
+    },
+    {
+      "src": "/(.*)",
+      "has": [
+        {
+          "type": "host",
+          "value": "(.*)\\.vercel\\.app"
+        }
+      ],
+      "headers": {
+        "Location": "https://cristiangordilloexposito.com/$1"
+      },
+      "status": 308
+    },
+    {
+      "src": "/resources/(.*)",
+      "status": 404
+    },
+    {
+      "src": "/api/(.*)",
+      "headers": {
+        "Cache-Control": "no-store"
+      },
+      "continue": true
+    },
+    {
+      "src": "/(.*)",
+      "headers": {
+        "X-Frame-Options": "DENY",
+        "X-Content-Type-Options": "nosniff",
+        "Referrer-Policy": "strict-origin-when-cross-origin"
+      },
+      "continue": true
+    },
+    {
+      "handle": "filesystem"
+    }
+  ]
+}
