@@ -5,6 +5,42 @@ const getById = <T extends HTMLElement>(id: string): T | null =>
 
 let scrollAnimationToken = 0;
 
+const heroTitles = [
+  ["console.log", "'-.-'", ""],
+  ["Error 404", "idea", "not found."],
+  ["500", "Internal", "Server Error"],
+  ["git commit", "-m", "'works'"],
+  ["npm run", "build", ""],
+  ["merge", "conflict", "resolved."],
+  ["debugger;", "mode", ""],
+  ["deploy", "green", "check."],
+  ["async", "await", ""],
+  ["null", "no es", "undefined"],
+  ["localhost", "===", "127.0.0.1"],
+  ["PR", "review", "approved."],
+  ["git push", "--force", "--with-lease"],
+  ["HTTP", "200", "OK"],
+  ["try", "catch", "finally"],
+  ["npm", "install", "again"],
+  ["Promise", "pending", "..."],
+  ["return", "false;", ""],
+];
+
+function initRandomHeroTitle(): void {
+  const title = getById<HTMLHeadingElement>("heroTitle");
+
+  if (!title) {
+    return;
+  }
+
+  const lines = title.querySelectorAll<HTMLElement>("[data-hero-line]");
+  const nextTitle = heroTitles[Math.floor(Math.random() * heroTitles.length)];
+
+  lines.forEach((line, index) => {
+    line.innerHTML = nextTitle[index] ?? "";
+  });
+}
+
 function easeInOutCubic(progress: number): number {
   return progress < 0.5
     ? 4 * progress * progress * progress
@@ -192,6 +228,176 @@ function initProjectGlow(): void {
   });
 }
 
+type ProjectDetail = {
+  badge: string;
+  title: string;
+  image: string;
+  imageAlt: string;
+  description: string;
+  stack: string[];
+  details: string[];
+};
+
+const projectDetails: Record<string, ProjectDetail> = {
+  baleares: {
+    badge: "App Web - Producto",
+    title: "Emergencias 112 Islas Baleares",
+    image: "/project-media/baleares-112.jpg",
+    imageAlt: "Logo de Emergencias 112 Baleares",
+    description:
+      "Aplicación web para la gestión de emergencias de las Islas Baleares. Permite a los operadores gestionar llamadas de emergencia, asignar recursos y coordinar equipos en tiempo real. Incluye integración con sistemas de geolocalización para optimizar rutas de respuesta y mejorar la eficiencia en la atención de emergencias.",
+    stack: ["React", "HxGn OnCall", "Java", "SQL"],
+    details: [
+      "Paneles de control para supervisores y seguimiento operativo.",
+      "Asignación y coordinación de recursos en escenarios críticos.",
+      "Generación de informes detallados sobre las operaciones.",
+    ],
+  },
+  policia: {
+    badge: "App Web",
+    title: "Policía Municipal de Madrid",
+    image: "/project-media/policia_municipal.jpg",
+    imageAlt: "Logo de Policía Municipal de Madrid",
+    description:
+      "Aplicación interna para la gestión de recursos humanos de la Policía Municipal de Madrid. Permite a los agentes consultar sus datos personales, gestionar sus turnos y solicitar permisos. Para los gestores del servicio, facilita la gestión de turnos, informes, incidencias y recursos operativos.",
+    stack: ["Angular", "TypeScript", "Figma", "Git"],
+    details: [
+      "Gestión de agentes, turnos, permisos y asignaciones.",
+      "Administración de vehículos, material e incidencias internas.",
+      "Interfaz pensada para flujos administrativos recurrentes.",
+    ],
+  },
+  ser: {
+    badge: "App Web",
+    title: "Servicio de Estacionamiento Regulado de Madrid",
+    image: "/project-media/madrid-logo.jpg",
+    imageAlt: "Logo de Madrid",
+    description:
+      "Herramienta interna y externa para gestionar el Servicio de Estacionamiento Regulado de Madrid. Permite a los usuarios comprar autorizaciones mensuales o anuales, consultarlas y renovarlas. Para los gestores del servicio, centraliza la gestión de autorizaciones, informes e incidencias.",
+    stack: ["Java", "JavaScript", "SQL", "SOAP & REST Web Services"],
+    details: [
+      "Consulta, compra y renovación de autorizaciones.",
+      "Gestión administrativa para operadores y gestores del servicio.",
+      "Integración con servicios SOAP y REST para procesos internos.",
+    ],
+  },
+  pockety: {
+    badge: "App móvil",
+    title: "Pockety",
+    image: "/project-media/pockety-logo.svg",
+    imageAlt: "Logo de Pockety",
+    description:
+      "Aplicación móvil para gestionar finanzas personales, con autenticación con dos factores, integración con bancos y panel de analíticas. Incluye sincronización con base de datos en tiempo real para mantener transacciones y balances actualizados al instante.",
+    stack: ["Java", "Firebase", "Android Studio"],
+    details: [
+      "Sincronización de transacciones y balances en tiempo real.",
+      "Autenticación reforzada con dos factores.",
+      "Panel de analíticas para visualizar hábitos financieros.",
+    ],
+  },
+};
+
+function initProjectModal(): void {
+  const modal = getById<HTMLDivElement>("projectModal");
+  const closeButton = getById<HTMLButtonElement>("projectModalClose");
+  const image = getById<HTMLImageElement>("projectModalImage");
+  const media = image?.closest<HTMLDivElement>(".project-modal__media") ?? null;
+  const badge = getById<HTMLSpanElement>("projectModalBadge");
+  const title = getById<HTMLHeadingElement>("projectModalTitle");
+  const description = getById<HTMLParagraphElement>("projectModalDescription");
+  const stack = getById<HTMLDivElement>("projectModalStack");
+  const details = getById<HTMLUListElement>("projectModalDetails");
+  const openButtons =
+    document.querySelectorAll<HTMLButtonElement>("[data-project-open]");
+
+  if (
+    !modal ||
+    !closeButton ||
+    !image ||
+    !media ||
+    !badge ||
+    !title ||
+    !description ||
+    !stack ||
+    !details ||
+    !openButtons.length
+  ) {
+    return;
+  }
+
+  let lastFocusedButton: HTMLButtonElement | null = null;
+
+  const setModalState = (isOpen: boolean): void => {
+    modal.classList.toggle("is-open", isOpen);
+    modal.setAttribute("aria-hidden", String(!isOpen));
+    document.body.classList.toggle("modal-open", isOpen);
+
+    if (isOpen) {
+      requestAnimationFrame(() => closeButton.focus());
+      return;
+    }
+
+    lastFocusedButton?.focus();
+  };
+
+  const renderProject = (project: ProjectDetail): void => {
+    image.onerror = () => {
+      image.onerror = null;
+      image.src = project.image;
+    };
+    image.src = project.image;
+    image.alt = project.imageAlt;
+    media.classList.toggle(
+      "project-modal__media--pockety",
+      project.title === "Pockety",
+    );
+    badge.textContent = project.badge;
+    title.textContent = project.title;
+    description.textContent = project.description;
+    stack.replaceChildren();
+    details.replaceChildren();
+
+    project.stack.forEach((item) => {
+      const chip = document.createElement("span");
+      chip.className = "stack-chip";
+      chip.textContent = item;
+      stack.append(chip);
+    });
+
+    project.details.forEach((item) => {
+      const detail = document.createElement("li");
+      detail.textContent = item;
+      details.append(detail);
+    });
+  };
+
+  openButtons.forEach((button) => {
+    button.addEventListener("click", () => {
+      const projectId = button.dataset.projectOpen;
+
+      if (!projectId || !projectDetails[projectId]) {
+        return;
+      }
+
+      lastFocusedButton = button;
+      renderProject(projectDetails[projectId]);
+      setModalState(true);
+    });
+  });
+
+  closeButton.addEventListener("click", () => setModalState(false));
+
+  modal.querySelectorAll<HTMLElement>("[data-project-close]").forEach((element) => {
+    element.addEventListener("click", () => setModalState(false));
+  });
+
+  document.addEventListener("keydown", (event: KeyboardEvent) => {
+    if (event.key === "Escape" && modal.classList.contains("is-open")) {
+      setModalState(false);
+    }
+  });
+}
+
 function initContactModal(): void {
   const openButton = getById<HTMLButtonElement>("contactModalOpen");
   const modal = getById<HTMLDivElement>("contactModal");
@@ -325,10 +531,12 @@ function initSmoothScroll(): void {
     });
 }
 
+initRandomHeroTitle();
 initCursor();
 initNavbar();
 initMobileMenu();
 initSmoothScroll();
 initReveal();
 initProjectGlow();
+initProjectModal();
 initContactModal();

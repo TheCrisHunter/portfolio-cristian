@@ -24,7 +24,7 @@
       <div class="nav-inner">
         <a href="#hero" class="nav-logo">cristian<span>.</span>gordillo</a>
         <ul class="nav-links">
-          <li><a href="#about">Acerca de mi</a></li>
+          <li><a href="#about">Acerca de m&iacute;</a></li>
           <li><a href="#projects">Proyectos</a></li>
           <li><a href="#experience">Experiencia</a></li>
         </ul>
@@ -42,7 +42,7 @@
           class="hamburger"
           id="hamburger"
           type="button"
-          aria-label="Abrir menu"
+          aria-label="Abrir men&uacute;"
           aria-controls="mobileMenu"
           aria-expanded="false"
         >
@@ -57,17 +57,17 @@
       class="mobile-menu"
       id="mobileMenu"
       aria-hidden="true"
-      aria-label="Menu de navegacion movil"
+      aria-label="Men&uacute; de navegaci&oacute;n m&oacute;vil"
     >
       <button
         class="mobile-close"
         id="mobileClose"
         type="button"
-        aria-label="Cerrar menu"
+        aria-label="Cerrar men&uacute;"
       >
         &times;
       </button>
-      <a href="#about" class="mobile-link">Acerca de mi</a>
+      <a href="#about" class="mobile-link">Acerca de m&iacute;</a>
       <a href="#projects" class="mobile-link">Proyectos</a>
       <a href="#experience" class="mobile-link">Experiencia</a>
       <a href="#contact" class="mobile-link">Contacto</a>
@@ -79,15 +79,14 @@
         <div class="hero-glow"></div>
         <div class="container">
           <div class="hero-tag">Disponible para proyectos</div>
-          <h1>
-            Desarrollo<br />
-            <em>web</em> que<br />
-            importa.
+          <h1 id="heroTitle">
+            <span data-hero-line="0">C&oacute;digo</span><br />
+            <em data-hero-line="1">web</em><br />
+            <span data-hero-line="2">con criterio.</span>
           </h1>
           <p class="hero-desc">
-            Construyo experiencias digitales r&aacute;pidas, accesibles y con
-            atenci&oacute;n al detalle. Frontend + Backend, de la idea al
-            deploy.
+            Desarrollo aplicaciones web con frontend cuidado, backend fiable y
+            c&oacute;digo preparado para crecer.
           </p>
           <div class="hero-actions">
             <a href="#projects" class="btn-main">Ver proyectos &rarr;</a>
@@ -99,11 +98,11 @@
               <div class="stat-label">A&ntilde;os exp.</div>
             </div>
             <div>
-              <div class="stat-num">5<span>+</span></div>
+              <div class="stat-num">4<span>+</span></div>
               <div class="stat-label">Proyectos</div>
             </div>
             <div>
-              <div class="stat-num">3<span>+</span></div>
+              <div class="stat-num">4<span>+</span></div>
               <div class="stat-label">Clientes</div>
             </div>
           </div>
@@ -124,12 +123,12 @@
           <div class="about-grid">
             <div class="about-text reveal">
               <p>
-                Hola!, soy
+                &iexcl;Hola! Soy
                 <strong>Cristian</strong>, desarrollador web Full Stack con base en Madrid.
                 Tengo un gran interés por la tecnología y la programación. Me encanta aprender
                 cosas nuevas y enfrentar desafíos que me permitan crecer tanto
                 personal como profesionalmente. Actualmente trabajo en una gran
-                consultora Japonesa llamada NTT DATA, donde tengo la oportunidad
+                consultora japonesa llamada NTT DATA, donde tengo la oportunidad
                 de colaborar en proyectos interesantes y trabajar con un equipo
                 talentoso.
               </p>
@@ -143,13 +142,14 @@
                 <span class="skill-tag">Java</span>
                 <span class="skill-tag">TypeScript</span>
                 <span class="skill-tag">Node.js</span>
-                <span class="skill-tag">HxGn</span>
-                <span class="skill-tag">MongoDB</span>
+                <span class="skill-tag">HxGn OnCall</span>
+                <span class="skill-tag">SQL</span>
                 <span class="skill-tag">SCSS</span>
                 <span class="skill-tag">Git</span>
                 <span class="skill-tag">Figma</span>
                 <span class="skill-tag">Astro</span>
                 <span class="skill-tag">Vite</span>
+                <span class="skill-tag">React</span>
               </div>
             </div>
 
@@ -222,57 +222,78 @@
             <article class="project-card reveal reveal-delay-1">
               <div class="project-top">
                 <span class="project-badge">App Web - Producto</span>
-                <!-- <div class="project-arrow" aria-hidden="true">&nearr;</div> -->
+                <button
+                  class="project-arrow"
+                  type="button"
+                  data-project-open="baleares"
+                  aria-label="Ver detalle de Emergencias 112 Islas Baleares"
+                >
+                  &nearr;
+                </button>
               </div>
               <div class="project-media project-media--baleares">
                 <img
                   src="/project-media/baleares-112.jpg"
-                  alt="Ilustraci&oacute;n de tienda online"
+                  alt="Logo de Emergencias 112 Baleares"
                   loading="lazy"
                 />
               </div>
-              <div class="project-title">Tienda online</div>
+              <div class="project-title">Emergencias 112 Islas Baleares</div>
               <div class="project-desc">
-                Plataforma con carrito, pagos con Stripe y panel de
-                administraci&oacute;n para gesti&oacute;n de inventario en
-                tiempo real.
+                Aplicaci&oacute;n web para coordinar llamadas, recursos y
+                equipos de emergencia en tiempo real.
               </div>
               <div class="project-stack">
-                <span class="stack-chip">Next.js</span>
-                <span class="stack-chip">PostgreSQL</span>
-                <span class="stack-chip">Stripe</span>
+                <span class="stack-chip">React</span>
+                <span class="stack-chip">HxGn OnCall</span>
+                <span class="stack-chip">Java</span>
+                <span class="stack-chip">SQL</span>
               </div>
             </article>
 
             <article class="project-card reveal reveal-delay-2">
               <div class="project-top">
                 <span class="project-badge">App Web</span>
-                <!-- <div class="project-arrow" aria-hidden="true">&nearr;</div> -->
-                
+                <button
+                  class="project-arrow"
+                  type="button"
+                  data-project-open="policia"
+                  aria-label="Ver detalle de Polic&iacute;a Municipal de Madrid"
+                >
+                  &nearr;
+                </button>
               </div>
               <div class="project-media project-media--policia">
                 <img
                   src="/project-media/policia_municipal.jpg"
-                  alt="Ilustraci&oacute;n de API REST"
+                  alt="Logo de Polic&iacute;a Municipal de Madrid"
                   loading="lazy"
                 />
               </div>
-              <div class="project-title">API REST escalable</div>
+              <div class="project-title">Polic&iacute;a Municipal de Madrid</div>
               <div class="project-desc">
-                Backend con autenticaci&oacute;n JWT, documentaci&oacute;n
-                Swagger autom&aacute;tica y cobertura de tests al 90%.
+                Aplicaci&oacute;n interna para gestionar turnos, permisos,
+                incidencias y recursos operativos de la Polic&iacute;a Municipal.
               </div>
               <div class="project-stack">
-                <span class="stack-chip">Express</span>
-                <span class="stack-chip">MongoDB</span>
-                <span class="stack-chip">Jest</span>
+                <span class="stack-chip">Angular</span>
+                <span class="stack-chip">TypeScript</span>
+                <span class="stack-chip">Figma</span>
+                <span class="stack-chip">Git</span>
               </div>
             </article>
 
             <article class="project-card reveal reveal-delay-1">
               <div class="project-top">
                 <span class="project-badge">App Web</span>
-                <!-- <div class="project-arrow" aria-hidden="true">&nearr;</div> -->
+                <button
+                  class="project-arrow"
+                  type="button"
+                  data-project-open="ser"
+                  aria-label="Ver detalle del Servicio de Estacionamiento Regulado de Madrid"
+                >
+                  &nearr;
+                </button>
               </div>
               <div class="project-media project-media--madrid">
                 <img
@@ -281,22 +302,30 @@
                   loading="lazy"
                 />
               </div>
-              <div class="project-title">Servicio de Estacionamiento Regulado Madrid</div>
+              <div class="project-title">Servicio de Estacionamiento Regulado de Madrid</div>
               <div class="project-desc">
-                Herramienta interna y externa para gestionar el servicio de estacionamiento regulado de Madrid. Permite a los usuarios poder comprar autorizaciones mensuales o anuales, consultar su autorizacion, renovarla, etc. Para los gestores del servicio, permite gestionar las autorizaciones, generar informes, gestionar incidencias, etc.
+                Plataforma para consultar, comprar y renovar autorizaciones
+                del SER, con gesti&oacute;n interna de informes e incidencias.
               </div>
               <div class="project-stack">
                 <span class="stack-chip">Java</span>
                 <span class="stack-chip">JavaScript</span>
                 <span class="stack-chip">SQL</span>
-                <span class="stack-chip">Soap & Rest Web Services</span>
+                <span class="stack-chip">SOAP & REST Web Services</span>
               </div>
             </article>
 
             <article class="project-card reveal reveal-delay-2">
               <div class="project-top">
                 <span class="project-badge">App m&oacute;vil</span>
-                <!-- <div class="project-arrow" aria-hidden="true">&nearr;</div> -->
+                <button
+                  class="project-arrow"
+                  type="button"
+                  data-project-open="pockety"
+                  aria-label="Ver detalle de Pockety"
+                >
+                  &nearr;
+                </button>
               </div>
               <div class="project-media project-media--pockety">
                 <img
@@ -308,8 +337,7 @@
               <div class="project-title">Pockety</div>
               <div class="project-desc">
                 Aplicaci&oacute;n m&oacute;vil para gestionar finanzas
-                personales, con autenticaci&oacute;n con dos factores,
-                integraci&oacute;n con bancos y panel de anal&iacute;ticas. Integracion con base de datos en tiempo real para sincronizar transacciones y balances al instante.
+                personales, sincronizar transacciones y visualizar balances.
               </div>
               <div class="project-stack">
                 <span class="stack-chip">Java</span>
@@ -333,9 +361,9 @@
               <div class="exp-date">2022 &mdash; Actual</div>
               <div>
                 <div class="exp-company">NTTData</div>
-                <div class="exp-role">Enginer - Frontend Leader</div>
+                <div class="exp-role">Engineer - Frontend Leader</div>
                 <div class="exp-desc">
-                  Soporte y construccion de aplicaciones web para clientes del sector publico. Construcción de componentes reutilizables y modulares. Colaboracion con equipos de backend y diseño para crear soluciones integrales. Participacion en la definicion de arquitectura frontend y mejores practicas. Mentoria a desarrolladores junior y revisiones de codigo.
+                  Soporte y construcci&oacute;n de aplicaciones web para clientes del sector p&uacute;blico. Construcci&oacute;n de componentes reutilizables y modulares. Colaboraci&oacute;n con equipos de backend y dise&ntilde;o para crear soluciones integrales. Participaci&oacute;n en la definici&oacute;n de arquitectura frontend y buenas pr&aacute;cticas. Mentor&iacute;a a desarrolladores junior y revisiones de c&oacute;digo.
                 </div>
               </div>
             </article>
@@ -344,9 +372,9 @@
               <div class="exp-date">2021 &mdash; 2021</div>
               <div>
                 <div class="exp-company">AppyWeb</div>
-                <div class="exp-role">Practicas</div>
+                <div class="exp-role">Pr&aacute;cticas</div>
                 <div class="exp-desc">
-                  Desarrollo de aplicaciones web, encargado de la parte del backend y colaboracion en el frontend. Participacion en reuniones de equipo y presentacion de avances a clientes.
+                  Desarrollo de aplicaciones web, encargado de la parte backend y colaboraci&oacute;n en frontend. Participaci&oacute;n en reuniones de equipo y presentaci&oacute;n de avances a clientes.
                 </div>
               </div>
             </article>
@@ -355,9 +383,9 @@
               <div class="exp-date">2018 &mdash; 2018</div>
               <div>
                 <div class="exp-company">Tinsa Portugal</div>
-                <div class="exp-role">Practicas</div>
+                <div class="exp-role">Pr&aacute;cticas</div>
                 <div class="exp-desc">
-                  Soporte tecnico y mantenimiento de equipos informaticos. Instalacion y configuracion de software. Atencion a clientes. Instalacion de redes y gestion de incidencias. Colaboracion en proyectos de mejora de infraestructura IT.
+                  Soporte t&eacute;cnico y mantenimiento de equipos inform&aacute;ticos. Instalaci&oacute;n y configuraci&oacute;n de software. Atenci&oacute;n a clientes. Instalaci&oacute;n de redes y gesti&oacute;n de incidencias. Colaboraci&oacute;n en proyectos de mejora de infraestructura IT.
                 </div>
               </div>
             </article>
@@ -371,10 +399,10 @@
           <div class="reveal">
             <div class="contact-title">&iquest;Trabajamos<br />juntos?</div>
             <p class="contact-sub">
-              Estoy disponible para proyectos freelance y posiciones full-time.
+              Estoy disponible para proyectos freelance y puestos a tiempo completo.
             </p>
             <button class="contact-email" id="contactModalOpen" type="button">
-              Enviame un correo <span role="img" aria-label="emoji">📧</span>
+              Env&iacute;ame un correo <span role="img" aria-label="email">📧</span>
             </button>
             <div class="social-row">
               <a
@@ -405,6 +433,38 @@
         </div>
       </section>
     </main>
+
+    <div class="project-modal" id="projectModal" aria-hidden="true">
+      <div class="project-modal__backdrop" data-project-close></div>
+      <article
+        class="project-modal__panel"
+        role="dialog"
+        aria-modal="true"
+        aria-labelledby="projectModalTitle"
+      >
+        <button
+          class="project-modal__close"
+          type="button"
+          id="projectModalClose"
+          aria-label="Cerrar detalle del proyecto"
+        >
+          &times;
+        </button>
+        <div class="project-modal__media">
+          <img id="projectModalImage" src="" alt="" />
+        </div>
+        <div class="project-modal__top">
+          <span class="project-badge" id="projectModalBadge"></span>
+          <div class="project-modal__stack" id="projectModalStack"></div>
+        </div>
+        <h2 id="projectModalTitle"></h2>
+        <p id="projectModalDescription"></p>
+        <div class="project-modal__details">
+          <h3>Detalle del proyecto</h3>
+          <ul id="projectModalDetails"></ul>
+        </div>
+      </article>
+    </div>
 
     <div class="contact-modal" id="contactModal" aria-hidden="true">
       <div class="contact-modal__backdrop" data-modal-close></div>

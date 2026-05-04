@@ -15,7 +15,7 @@ const cleanText = (value) =>
 export default async function handler(request, response) {
   if (request.method !== "POST") {
     response.setHeader("Allow", "POST");
-    json(response, 405, { message: "Metodo no permitido." });
+    json(response, 405, { message: "Método no permitido." });
     return;
   }
 
@@ -24,7 +24,7 @@ export default async function handler(request, response) {
   const fromEmail = process.env.CONTACT_FROM_EMAIL;
 
   if (!apiKey || !toEmail || !fromEmail) {
-    json(response, 500, { message: "El envio no esta configurado." });
+    json(response, 500, { message: "El envío no está configurado." });
     return;
   }
 

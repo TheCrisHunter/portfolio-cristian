@@ -1,4 +1,4 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 520 220" role="img" aria-label="Dashboard de analiticas">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 520 220" role="img" aria-label="Dashboard de analíticas">
   <rect width="520" height="220" rx="18" fill="#111111"/>
   <rect x="36" y="32" width="448" height="156" rx="14" fill="#0a0a0a" stroke="rgba(255,255,255,.12)"/>
   <path d="M36 70h448" stroke="#c8f542" stroke-opacity=".45"/>
